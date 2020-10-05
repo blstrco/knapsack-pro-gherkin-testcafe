@@ -1,7 +1,7 @@
 {
-  "name": "@knapsack-pro/jest",
-  "version": "4.0.1",
-  "description": "Knapsack Pro Jest splits Jest tests across CI nodes and makes sure that tests will run in optimal time on each CI node.",
+  "name": "@knapsack-pro/gherkin-testcafe",
+  "version": "1.0.0",
+  "description": "Knapsack Pro custom runner for Gherkin/Testcafe",
   "keywords": [
     "knapsack",
     "knapsack pro",
@@ -49,7 +49,7 @@
     "url": "https://github.com/KnapsackPro/knapsack-pro-jest/issues"
   },
   "bin": {
-    "knapsack-pro-jest": "lib/knapsack-pro-jest.js"
+    "knapsack-pro-jest": "lib/knapsack-pro-gherkin-testcafe.js"
   },
   "dependencies": {
     "@knapsack-pro/core": "^3.0.1",
@@ -59,10 +59,9 @@
     "uuid": "^8.3.0"
   },
   "peerDependencies": {
-    "jest": ">=22.0.0 <27.0.0"
+    "gherkin-testcafe": "^2.5.1"
   },
   "devDependencies": {
-    "jest": "^26.4.2",
     "@babel/core": "^7.11.4",
     "@babel/preset-env": "^7.11.0",
     "@babel/register": "^7.10.5",
@@ -74,6 +73,7 @@
     "eslint": "^7.7.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.0",
+    "gherkin-testcafe": "^2.5.1",
     "prettier": "2.1.0",
     "tslint": "^5.20.1",
     "tslint-config-airbnb": "^5.11.2",
