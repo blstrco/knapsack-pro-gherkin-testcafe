@@ -2,7 +2,7 @@
 
 const { name: clientName, version: clientVersion } = require('../package.json');
 
-const jest = require('jest');
+const createTestCafe = require('gherkin-testcafe');
 const { v4: uuidv4 } = require('uuid');
 
 import {
@@ -14,12 +14,12 @@ import {
 } from '@knapsack-pro/core';
 import { EnvConfig } from './env-config';
 import { TestFilesFinder } from './test-files-finder';
-import { JestCLI } from './jest-cli';
+import { TestcafeCLI } from './testcafe-cli';
 
-const jestCLIOptions = JestCLI.argvToOptions();
+const testcafeCLIOptions = TestcafeCLI.argvToOptions();
 const knapsackProLogger = new KnapsackProLogger();
 knapsackProLogger.debug(
-  `Jest CLI options:\n${KnapsackProLogger.objectInspect(jestCLIOptions)}`
+  `Testcafe CLI options:\n${KnapsackProLogger.objectInspect(TestcafeCLI)}`
 );
 
 EnvConfig.loadEnvironmentVariables();
@@ -37,21 +37,20 @@ const onSuccess: onQueueSuccessType = async (queueTestFiles: TestFile[]) => {
     (testFile: TestFile) => testFile.path
   );
 
-  const jestCLICoverage = EnvConfig.coverageDirectory
-    ? { coverageDirectory: `${EnvConfig.coverageDirectory}/${uuidv4()}` }
-    : {};
+  const testcafeRunner = async () => {
+    const testcafe = await createTestCafe('localhost', 1337, 1338);
+    const runner = await testcafe.createRunner();
+    const remoteConnection = await testcafe.createBrowserConnection();
+
+    return runner
+      .src([...testFilePaths])
+      .browsers([remoteConnection, 'chrome'])
+      .run();
+  };
 
   const {
     results: { success: isTestSuiteGreen, testResults },
-  } = await jest.runCLI(
-    {
-      ...jestCLIOptions,
-      ...jestCLICoverage,
-      runTestsByPath: true,
-      _: testFilePaths,
-    },
-    [projectPath]
-  );
+  } = await testcafeRunner();
 
   const recordedTestFiles: TestFile[] = testResults.map(
     ({

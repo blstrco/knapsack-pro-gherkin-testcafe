@@ -17,7 +17,7 @@ export class EnvConfig {
     // (e.g. Component.test.js or Component.spec.js).
     // It will also find files called test.js or spec.js.
     // https://jestjs.io/docs/en/22.2/configuration#testmatch-array-string
-    return '{**/__tests__/**/*.js?(x),**/?(*.)(spec|test).js?(x)}';
+    return '{**/**/*.ts?(x),**/?(*.)(spec|test).ts?(x)}';
   }
 
   public static get testFileExcludePattern(): void | string {
