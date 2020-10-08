@@ -1,6 +1,6 @@
 {
-  "name": "@knapsack-pro/gherkin-testcafe",
-  "version": "1.0.0",
+  "name": "@linktr.ee/knapsack-gherkin-testcafe",
+  "version": "1.0.1",
   "description": "Knapsack Pro custom runner for Gherkin/Testcafe",
   "keywords": [
     "knapsack",
@@ -43,13 +43,13 @@
   "homepage": "https://knapsackpro.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/KnapsackPro/knapsack-pro-jest.git"
+    "url": "https://github.com/blstrco/knapsack-pro-gherkin-testcafe.git"
   },
   "bugs": {
     "url": "https://github.com/KnapsackPro/knapsack-pro-jest/issues"
   },
   "bin": {
-    "knapsack-pro-jest": "lib/knapsack-pro-gherkin-testcafe.js"
+    "knapsack-pro-gherkin-testcafe": "lib/knapsack-pro-gherkin-testcafe.js"
   },
   "dependencies": {
     "@knapsack-pro/core": "^3.0.1",
