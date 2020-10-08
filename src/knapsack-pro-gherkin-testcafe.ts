@@ -43,7 +43,7 @@ const onSuccess: onQueueSuccessType = async (queueTestFiles: TestFile[]) => {
 
     return runner
       .src([...testFilePaths])
-      .browsers([remoteConnection, 'chromium:headless'])
+      .browsers(['chromium:headless'])
       .run();
   };
 
