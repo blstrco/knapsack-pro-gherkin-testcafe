@@ -37,7 +37,7 @@ const onSuccess: onQueueSuccessType = async (queueTestFiles: TestFile[]) => {
   );
 
   const testcafeRunner = async () => {
-    const testcafe = await createTestCafe('localhost', 1337, 1338);
+    const testcafe = await createTestCafe();
     const runner = await testcafe.createRunner();
     const remoteConnection = await testcafe.createBrowserConnection();
 
