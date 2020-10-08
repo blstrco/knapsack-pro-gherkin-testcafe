@@ -7,7 +7,7 @@ jobs:
     docker:
       - image: circleci/node:12.18
 
-    working_directory: ~/knapsack-pro-jest
+    working_directory: ~/knapsack-pro-gherkin-testcafe
 
     steps:
       # clone @knapsack-pro/core project
