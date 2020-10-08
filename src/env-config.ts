@@ -13,12 +13,4 @@ export class EnvConfig {
 
     return '{**/?(*.).feature?(x),**/?(*.)(steps).ts?(x)}';
   }
-
-  public static get testFileExcludePattern(): void | string {
-    return process.env.KNAPSACK_PRO_TEST_FILE_EXCLUDE_PATTERN;
-  }
-
-  public static get coverageDirectory(): void | string {
-    return process.env.KNAPSACK_PRO_COVERAGE_DIRECTORY;
-  }
 }
