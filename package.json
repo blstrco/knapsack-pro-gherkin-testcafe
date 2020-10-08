@@ -1,6 +1,6 @@
 {
   "name": "@linktr.ee/knapsack-gherkin-testcafe",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Knapsack Pro custom runner for Gherkin/Testcafe",
   "keywords": [
     "knapsack",
