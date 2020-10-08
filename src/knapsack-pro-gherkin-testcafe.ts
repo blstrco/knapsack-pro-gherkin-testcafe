@@ -40,10 +40,7 @@ const onSuccess: onQueueSuccessType = async (queueTestFiles: TestFile[]) => {
     const testcafe = await createTestCafe();
     const runner = await testcafe.createRunner();
 
-    return runner
-      .src([...testFilePaths])
-      .browsers(['chromium:headless'])
-      .run();
+    return runner.src([...testFilePaths]).run();
   };
 
   const {
