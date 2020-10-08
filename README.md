@@ -1,8 +1,8 @@
-# @knapsack-pro/jest
+# @knapsack-pro/gherkin-cucumber
 
 [![CircleCI](https://circleci.com/gh/KnapsackPro/knapsack-pro-jest.svg?style=svg)](https://circleci.com/gh/KnapsackPro/knapsack-pro-jest)
 
-`@knapsack-pro/jest` runs your tests with [Jest](https://jestjs.io) test runner and does dynamic tests allocation across parallel CI nodes using [KnapsackPro.com](https://knapsackpro.com?utm_source=github&utm_medium=readme&utm_campaign=%40knapsack-pro%2Fjest&utm_content=sign_up) Queue Mode to provide the fastest CI build time (optimal test suite timing).
+`@knapsack-pro/gherkin-cucumber` runs your tests with [Gherkin/Testcafe](https://jestjs.io) test runner and does dynamic tests allocation across parallel CI nodes using [KnapsackPro.com](https://knapsackpro.com?utm_source=github&utm_medium=readme&utm_campaign=%40knapsack-pro%2Fjest&utm_content=sign_up) Queue Mode to provide the fastest CI build time (optimal test suite timing).
 
 Learn about Knapsack Pro Queue Mode in the video [how to run tests with dynamic test suite split](https://youtu.be/hUEB1XDKEFY) and learn what CI problems can be solved thanks to it.
 

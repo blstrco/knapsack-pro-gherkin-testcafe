@@ -3,7 +3,6 @@
 const { name: clientName, version: clientVersion } = require('../package.json');
 
 const createTestCafe = require('gherkin-testcafe');
-const { v4: uuidv4 } = require('uuid');
 
 import {
   KnapsackProCore,
